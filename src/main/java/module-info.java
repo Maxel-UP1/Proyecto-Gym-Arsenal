@@ -3,8 +3,8 @@ module com.example.ejemplojfx {
     requires javafx.fxml;
 
 
-    opens ui to javafx.fxml;
-    exports ui;
-    exports controlers;
-    opens controlers to javafx.fxml;
+    opens view to javafx.fxml;
+    exports view;
+    exports controlerView;
+    opens controlerView to javafx.fxml;
 }
