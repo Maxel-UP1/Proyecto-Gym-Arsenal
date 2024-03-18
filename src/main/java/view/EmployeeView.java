@@ -33,5 +33,6 @@ public class EmployeeView extends Application {
         stage.setTitle("Menu Empleado");
         stage.setScene(scene);
         stage.show();
+
     }
 }
