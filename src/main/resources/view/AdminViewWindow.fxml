@@ -24,7 +24,7 @@
             <Image url="@../images/LogoGym.jpg" />
          </image>
       </ImageView>
-      <Label contentDisplay="TEXT_ONLY" graphicTextGap="7.0" layoutX="247.0" layoutY="65.0" nodeOrientation="RIGHT_TO_LEFT" text="1. Gestionar informacion de Gimnacio:" textFill="WHITE" textOverrun="LEADING_WORD_ELLIPSIS" wrapText="true">
+      <Label contentDisplay="TEXT_ONLY" graphicTextGap="7.0" layoutX="247.0" layoutY="65.0" nodeOrientation="RIGHT_TO_LEFT" text="1. Gestionar informacion del Gym" textFill="WHITE" textOverrun="LEADING_WORD_ELLIPSIS" wrapText="true">
          <font>
             <Font size="20.0" />
          </font>
@@ -32,12 +32,12 @@
             <Cursor fx:constant="TEXT" />
          </cursor>
       </Label>
-      <Label layoutX="247.0" layoutY="152.0" text="2. Mostrar Finansas: " textFill="#faf7f7" wrapText="true">
+      <Label layoutX="247.0" layoutY="152.0" text="2. Mostrar Finanzas: " textFill="#faf7f7" wrapText="true">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Button layoutX="273.0" layoutY="102.0" mnemonicParsing="false" text="Seleccionar" textFill="#008a28">
+      <Button layoutX="273.0" layoutY="102.0" mnemonicParsing="false" text="Entrar" textFill="#008a28">
          <font>
             <Font size="14.0" />
          </font>
@@ -52,17 +52,17 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Button layoutX="273.0" layoutY="185.0" mnemonicParsing="false" text="Seleccionar" textFill="#008a28">
+      <Button layoutX="273.0" layoutY="185.0" mnemonicParsing="false" text="Entrar" textFill="#008a28">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Label layoutX="247.0" layoutY="244.0" text="3. Modificar Constancias:" textFill="#faf7f7" wrapText="true">
+      <Label layoutX="247.0" layoutY="244.0" text="3. Modificar Informacion del Gym:" textFill="#faf7f7" wrapText="true">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Button layoutX="273.0" layoutY="282.0" mnemonicParsing="false" text="Seleccionar" textFill="#008a28">
+      <Button layoutX="273.0" layoutY="282.0" mnemonicParsing="false" text="Entrar" textFill="#008a28">
          <font>
             <Font size="14.0" />
          </font>
