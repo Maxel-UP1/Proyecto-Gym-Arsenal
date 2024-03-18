@@ -5,8 +5,8 @@ public class User {
     private String lastName;
     private String id;
     private Role rol;
-    private Account account;
-    private int horasTrabajadas; // Nuevo atributo
+    private Account acount;
+    private int horasTrabajadas;
 
     public String getName() {
         return name;
@@ -40,12 +40,38 @@ public class User {
         this.rol = rol;
     }
 
-    public Account getAccount() {
-        return account;
+    public Account getAcount() {
+        return acount;
     }
 
-    public void setAccount(Account account) {
-        this.account = account;
+    public void setAcount(Account acount) {
+        this.acount = acount;
+    }
+    
+
+    public User(String name, String lastName, String id, Role rol) {
+
+        this.name = name;
+        this.lastName = lastName;
+        this.id = id;
+        this.rol = rol;
+    }
+
+    public User(String name, String lastName, String id, Role rol, Account account) {
+
+        this.name = name;
+        this.lastName = lastName;
+        this.id = id;
+        this.rol = rol;
+        this.acount = account;
+    }
+    public User() {
+
+    }
+
+    @Override
+    public String toString() {
+        return "Nombre: " + name + "\nApellido = " + lastName + "\nID unico = " + id + "\nRol asignado= " + rol;
     }
 
     public int getHorasTrabajadas() {
@@ -56,30 +82,7 @@ public class User {
         this.horasTrabajadas = horasTrabajadas;
     }
 
-    public User(String name, String lastName, String id, Role rol, Account account, int horasTrabajadas) {
-        this.name = name;
-        this.lastName = lastName;
-        this.id = id;
-        this.rol = rol;
-        this.account = account;
-        this.horasTrabajadas = horasTrabajadas;
-    }
 
-    public User(String name, String lastName, String id, Role rol, Account account) {
-        this.name = name;
-        this.lastName = lastName;
-        this.id = id;
-        this.rol = rol;
-        this.account = account;
-    }
 
-    public User() {
 
-    }
-
-    @Override
-    public String toString() {
-        return "Nombre: " + name + "\nApellido: " + lastName + "\nID único: " + id + "\nRol asignado: " + rol +
-               "\nHoras trabajadas: " + horasTrabajadas; // Incluye horasTrabajadas en el toString()
-    }
 }
