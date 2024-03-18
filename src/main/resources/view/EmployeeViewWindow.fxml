@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlerView.EmployeeWindowControler">
    <opaqueInsets>
       <Insets />
    </opaqueInsets>
@@ -28,12 +28,12 @@
             <Font size="29.0" />
          </font>
       </Label>
-      <Button layoutX="62.0" layoutY="323.0" mnemonicParsing="false" text="Retroceder" textFill="#ea0808">
+      <Button fx:id="btnBack" layoutX="62.0" layoutY="323.0" mnemonicParsing="false" onAction="#goBack" text="Retroceder" textFill="#ea0808">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
-      <Label layoutX="362.0" layoutY="67.0" text="Nombre" textFill="#faf7f7">
+      <Label fx:id="txtNameEmployee" layoutX="362.0" layoutY="67.0" text="Nombre" textFill="#faf7f7">
          <font>
             <Font size="16.0" />
          </font>
@@ -43,8 +43,8 @@
             <Font size="15.0" />
          </font>
       </Label>
-      <Button layoutX="271.0" layoutY="208.0" mnemonicParsing="false" text="Ver Ganancias" textFill="#030a8e" />
-      <Button layoutX="430.0" layoutY="208.0" mnemonicParsing="false" text="Horas Trabajadas" textFill="#020d6e" />
+      <Button fx:id="btnProfit" layoutX="271.0" layoutY="208.0" mnemonicParsing="false" onAction="#seeProfit" text="Ver Ganancias" textFill="#030a8e" />
+      <Button fx:id="btnHourWorked" layoutX="430.0" layoutY="208.0" mnemonicParsing="false" onAction="#seeWorkedHours" text="Horas Trabajadas" textFill="#020d6e" />
       <Label layoutX="376.0" layoutY="164.0" text="Ver :" textFill="#faf7f7">
          <font>
             <Font size="16.0" />

@@ -10,20 +10,19 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class RegisterView extends Application {
+public class EmployeeView extends Application {
 
     public UserAcountControler userAcountControler;
 
-    public RegisterView(UserAcountControler userAcountControler) {
+    public EmployeeView(UserAcountControler userAcountControler) {
         this.userAcountControler = userAcountControler;
     }
 
     @Override
     public void start(Stage stage) throws IOException {
-        userAcountControler.chargeUsersReadFile("users");
-
-        // Muestra la ventana principal
-        FXMLLoader fxmlLoader = new FXMLLoader(RegisterView.class.getResource("RegisterViewWindow.fxml"));
+       
+        FXMLLoader fxmlLoader = new FXMLLoader(EmployeeView.class.getResource("EmployeeView.fxml"));
+        
         RegisterWindowControler registerWindowControler = new RegisterWindowControler(userAcountControler);
         fxmlLoader.setController(registerWindowControler);
 
