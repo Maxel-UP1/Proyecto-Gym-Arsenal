@@ -50,13 +50,17 @@ public class LoginView extends Application {
 
         Type userListType = new TypeToken<List<User>>(){}.getType();
         js.saveDataToFile(users, "usersBorrar" , userListType);*/
-        Type userListType = new TypeToken<List<User>>(){}.getType();
+
+
+        /*Type userListType = new TypeToken<List<User>>(){}.getType();
         List<User>  users  =js.readContentFromFile("usersBorrar", userListType);
 
         for (User u: users) {
             System.out.println(u.toString());
+            System.out.println("Su cuenta");
+            System.out.println(u.getAcount().toString());
 
-        }
+        }*/
         System.out.println("donde estoy");
 
 

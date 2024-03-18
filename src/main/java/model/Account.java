@@ -39,7 +39,14 @@ public class Account {
         this.idPerson = "hola";
         this.password = "vvidal";
         this.nameUser = name;
+    }
 
-
+    @Override
+    public String toString() {
+        return "Account{" +
+                "idPerson='" + idPerson + '\'' +
+                ", nameUser='" + nameUser + '\'' +
+                ", password='" + password + '\'' +
+                '}';
     }
 }

@@ -24,17 +24,15 @@ public class JsonStorageUtilities {
         ///readAccounts("accounts");
     }
 
-    public <T> boolean saveDataToFile(List<T> dataList, String fileName, Type type) {
+    public <T> void saveDataToFile(List<T> dataList, String fileName, Type type) {
         File file = new File(FILEPATH + fileName + EXTENSION);
         if (dataList == null) {
             dataList = new ArrayList<>();
         }
         try (FileWriter fileWriter = new FileWriter(file)) {
             gson.toJson(dataList, type, fileWriter);
-            return true;
         } catch (IOException e) {
             e.printStackTrace();
-            return false;
         }
     }
 

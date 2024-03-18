@@ -6,7 +6,7 @@ public class Utilities {
     //los primeros 3 son metodos utlizados para generar cuentas.
 
     //el metodo quita espacios al principio y al final del nombre.
-    public static String cleanNames(String name){
+    public  String cleanNames(String name){
         String cleanName =  name.toLowerCase();
         ArrayList<String> names = new ArrayList<>();
         String aux = "";
