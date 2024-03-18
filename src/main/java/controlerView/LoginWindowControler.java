@@ -8,6 +8,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import view.EmployeeView;
 import view.RegisterView;
 
 import java.io.IOException;
@@ -25,7 +26,7 @@ public class LoginWindowControler {
     public TextField txtUsername;
     public PasswordField txtPassword;
 
-    public void logIn(ActionEvent actionEvent) {
+    public void logIn(ActionEvent actionEvent) throws IOException {
         //inicia la sesion
         //System.out.println(userAcountControler.aaa());
         //System.out.println( "Esta vacio? " + loginControler.ddd());
@@ -37,7 +38,8 @@ public class LoginWindowControler {
             //preguna el rol para la nueva ventana
             switch (loginControler.roleUserLoged()) {
                 case "EMPLOYEE":
-                    
+                    EmployeeView employeeView = new EmployeeView( userAcountControler);
+                    employeeView.start(new Stage());
 
                     break;
                 case "ADMIN":

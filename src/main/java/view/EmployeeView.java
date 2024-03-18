@@ -1,6 +1,7 @@
 package view;
 
 import controler.UserAcountControler;
+import controlerView.EmployeeWindowControler;
 import controlerView.RegisterWindowControler;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -21,15 +22,15 @@ public class EmployeeView extends Application {
     @Override
     public void start(Stage stage) throws IOException {
        
-        FXMLLoader fxmlLoader = new FXMLLoader(EmployeeView.class.getResource("EmployeeView.fxml"));
-        
-        RegisterWindowControler registerWindowControler = new RegisterWindowControler(userAcountControler);
-        fxmlLoader.setController(registerWindowControler);
+        FXMLLoader fxmlLoader = new FXMLLoader(EmployeeView.class.getResource("EmployeeViewWindow.fxml"));
+        EmployeeWindowControler employeeWindowControler = new EmployeeWindowControler(userAcountControler);
+
+        fxmlLoader.setController(employeeWindowControler);
 
         Parent root = fxmlLoader.load();
-        Scene scene = new Scene(root, 600, 400);
+        Scene scene = new Scene(root, 615, 415);
 
-        stage.setTitle("Registro Usuarios");
+        stage.setTitle("Menu Empleado");
         stage.setScene(scene);
         stage.show();
     }
