@@ -12,11 +12,26 @@ import java.util.List;
 
 public class UserAcountControler {
 
-    User userLoged;
-    Account accountUserLoged;
-
     private Utilities accUtilities;
     private ArrayList<User> usersList;
+    private JsonStorageUtilities jsonStorageUtilities;
+
+    public ArrayList<User> getUsersList() {
+        return usersList;
+    }
+
+    public void setUsersList(ArrayList<User> usersList) {
+        this.usersList = usersList;
+    }
+
+    public ArrayList<Account> getAcountsList() {
+        return acountsList;
+    }
+
+    public void setAcountsList(ArrayList<Account> acountsList) {
+        this.acountsList = acountsList;
+    }
+
     private ArrayList<Account> acountsList;
     private static  final Type PERSONTYPE = new TypeToken<List<User>>(){}.getType();
 
@@ -31,7 +46,22 @@ public class UserAcountControler {
         return acountsList;
     }
 
-    JsonStorageUtilities jsonStorageUtilities = new JsonStorageUtilities();
+    public UserAcountControler() {
+        this.accUtilities = new Utilities();
+        this.usersList = new ArrayList<>();
+        this.acountsList = new ArrayList<>();
+        this.jsonStorageUtilities = new JsonStorageUtilities();
+    }
+
+    public String aaa(){
+        String a ="";
+        for (User u : usersList) {
+            a = a + u.toString();
+        }
+        return  a;
+    }
+
+
 
     public void chargeUsersReadFile(String nameFile){
 
@@ -39,9 +69,10 @@ public class UserAcountControler {
 
         //Convertir la lista de usuarios a un ArrayList<User>
         this.usersList = new ArrayList<>(userList);
-        //gaurada las cuentas en su lista
+        //gurada las cuentas en su lista
         for (User  user : usersList ) {
             acountsList.add(user.getAcount());
+            //System.out.println(user.toString() + "\n cuenta " + user.getAcount().toString());
         }
 
     }
@@ -93,7 +124,6 @@ public class UserAcountControler {
         jsonStorageUtilities.saveDataToFile(userListTEMP, nameFile, PERSONTYPE);
         //se llama al metodo para recargar las cuentas en su almacenamientos.
         chargeUsersReadFile(nameFile);
-
 
     }
 

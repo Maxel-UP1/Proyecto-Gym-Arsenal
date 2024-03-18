@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Pepito",
+    "lastName": "Perez",
+    "id": "2024B01",
+    "rol": "EMPLOYEE",
+    "acount": {
+      "idPerson": "2024B01",
+      "nameUser": "pep23",
+      "password": "12345"
+    }
+  },
+  {
+    "name": "Camilo",
+    "lastName": "Rodriguez",
+    "id": "2024B02",
+    "rol": "EMPLOYEE",
+    "acount": {
+      "idPerson": "2024B02",
+      "nameUser": "camro",
+      "password": "abcd"
+    }
+  },
+  {
+    "name": "Samuel",
+    "lastName": "Gonzalez",
+    "id": "2024A00",
+    "rol": "ADMIN",
+    "acount": {
+      "idPerson": "2024A00",
+      "nameUser": "admin",
+      "password": "admin"
+    }
+  }
+]

@@ -1,31 +1,46 @@
 package view;
 
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
+
+import controler.LoginControler;
+import controler.UserAcountControler;
+import controlerView.LoginWindowControler;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import model.Account;
-import model.Role;
-import model.User;
-import persistence.JsonStorageUtilities;
-
-import java.io.FileWriter;
 import java.io.IOException;
-import java.lang.reflect.Type;
-import java.util.ArrayList;
-import java.util.List;
+
 
 public class LoginView extends Application {
+    private  UserAcountControler userAcountControler;
+    private LoginControler loginControler;
 
     public static Stage currentStage;
+
+    public LoginView(){
+        userAcountControler = new UserAcountControler();
+
+    }
 
 
     @Override
     public void start(Stage stage) throws IOException {
+
+
+        userAcountControler.chargeUsersReadFile("users");
+        loginControler = new LoginControler(userAcountControler);
+
+
+        //muestra la ventana principal
         FXMLLoader fxmlLoader = new FXMLLoader(LoginView.class.getResource("loginViewWindow.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 600, 400);
+        LoginWindowControler loginController = new LoginWindowControler(userAcountControler, loginControler);
+        fxmlLoader.setControllerFactory(controllerClass -> {
+            // Devolver la instancia de tu controlador
+            return loginController;
+        });
+        Parent root = fxmlLoader.load();
+        Scene scene = new Scene(root, 600, 400);
         stage.setTitle("Finazas GYM Arsenal");
         stage.setScene(scene);
         stage.show();
@@ -42,27 +57,6 @@ public class LoginView extends Application {
 
     public static void main(String[] args) {
         launch();
-
-        JsonStorageUtilities js = new JsonStorageUtilities();
-        /*List<User> users = new ArrayList<>();
-        users.add(new User("John", "Doe", "12345", Role.ADMIN, new Account("user1")));
-        users.add(new User("Jane", "Smith", "67890", Role.EMPLOYEE, new Account("user2")));
-
-        Type userListType = new TypeToken<List<User>>(){}.getType();
-        js.saveDataToFile(users, "usersBorrar" , userListType);*/
-
-
-        /*Type userListType = new TypeToken<List<User>>(){}.getType();
-        List<User>  users  =js.readContentFromFile("usersBorrar", userListType);
-
-        for (User u: users) {
-            System.out.println(u.toString());
-            System.out.println("Su cuenta");
-            System.out.println(u.getAcount().toString());
-
-        }*/
-        System.out.println("donde estoy");
-
 
 
     }

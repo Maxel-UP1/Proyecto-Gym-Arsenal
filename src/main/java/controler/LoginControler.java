@@ -1,24 +1,37 @@
 package controler;
 
 
-import java.util.HashSet;
+import java.util.ArrayList;
+
 import model.Account;
-import model.Role;
 import model.User;
-import utilities.Utilities;
+
 public class LoginControler {
     //Cuentas e usuarios viene de la persistencia
-    private HashSet<User> users;
-    private HashSet<Account> acounts;
+    UserAcountControler userAcountControler;
 
-    private User userLogged;
+    private ArrayList<User> usersList;
+    private ArrayList<Account> acountsList ;
     private Account logedAcount;
+    private User userLogged;
 
+    public LoginControler(UserAcountControler userAcountControler) {
+        this.usersList = userAcountControler.getUsersList();
+        this.acountsList = userAcountControler.getAcountsList();
+        this.userAcountControler = userAcountControler;
 
-    public LoginControler() {
-        users = new HashSet<>();
-        acounts = new HashSet<>();
     }
+
+
+    public String ddd(){
+    String a ="";
+        for (User u : usersList) {
+            a = a + u.toString();
+        }
+        return  a;
+    }
+
+
 
     public User getUserLogged() {
         return userLogged;
@@ -29,19 +42,8 @@ public class LoginControler {
         return logedAcount;
     }
 
-
-
-    public void loadAcounts() {
-        //leer la persistencia llamadno al controaldor
-
-
-    }
-
-
-
-
     public boolean logIn(String nameUser, String password) {
-        for (User user : users) {
+        for (User user : usersList) {
 
             if(user.getAcount().getNameUser().equals(nameUser) && user.getAcount().getPassword().equals(password)) {
                 userLogged = user;
