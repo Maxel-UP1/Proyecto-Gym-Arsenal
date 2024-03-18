@@ -34,10 +34,19 @@ public class LoginWindowControler {
         boolean loginAnswer =  loginControler.logIn(txtUsername.getText(), txtPassword.getText());
 
         if (loginAnswer){
-            //incio sesion bien, continua la neuva ventana
-            System.out.println("Inicio sesion bien");
+            //preguna el rol para la nueva ventana
+            switch (loginControler.roleUserLoged()) {
+                case "EMPLOYEE":
+                    
 
+                    break;
+                case "ADMIN":
+                    
 
+                    break;
+                
+                
+            }
 
 
 

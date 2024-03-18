@@ -70,7 +70,7 @@ public class RegisterWindowControler {
 
 
         // Validar nombre de usuario
-        nameUser = utilities.cleanNames(nameUser);
+    
 
         if (userAcountControler.validateNameUserAcount(nameUser, "users")){
             setMessage("Error: ", "Nombre de Usuario ya esta en uso");

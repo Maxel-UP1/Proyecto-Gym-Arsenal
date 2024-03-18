@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" >
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <opaqueInsets>
       <Insets />
    </opaqueInsets>
@@ -19,12 +19,12 @@
             <Image url="@../images/fondoLogin.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="161.0" fitWidth="390.0" layoutX="-72.0">
+      <ImageView fitHeight="161.0" fitWidth="390.0" layoutX="-72.0" layoutY="102.0">
          <image>
             <Image url="@../images/LogoGym.jpg" />
          </image>
       </ImageView>
-      <Label contentDisplay="TEXT_ONLY" graphicTextGap="7.0" layoutX="247.0" layoutY="65.0" nodeOrientation="RIGHT_TO_LEFT" text="1. Gestionar informacion del Gym" textFill="WHITE" textOverrun="LEADING_WORD_ELLIPSIS" wrapText="true">
+      <Label contentDisplay="TEXT_ONLY" graphicTextGap="7.0" layoutX="238.0" layoutY="87.0" nodeOrientation="RIGHT_TO_LEFT" text="1. Gestionar Finanzas del Gym" textFill="WHITE" textOverrun="LEADING_WORD_ELLIPSIS" wrapText="true">
          <font>
             <Font size="20.0" />
          </font>
@@ -32,12 +32,12 @@
             <Cursor fx:constant="TEXT" />
          </cursor>
       </Label>
-      <Label layoutX="247.0" layoutY="152.0" text="2. Mostrar Finanzas: " textFill="#faf7f7" wrapText="true">
+      <Label layoutX="239.0" layoutY="167.0" text="2. Mostrar Finanzas: " textFill="#faf7f7" wrapText="true">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Button layoutX="273.0" layoutY="102.0" mnemonicParsing="false" text="Entrar" textFill="#008a28">
+      <Button layoutX="270.0" layoutY="124.0" mnemonicParsing="false" text="Entrar" textFill="#008a28">
          <font>
             <Font size="14.0" />
          </font>
@@ -52,20 +52,30 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Button layoutX="273.0" layoutY="185.0" mnemonicParsing="false" text="Entrar" textFill="#008a28">
+      <Button layoutX="270.0" layoutY="211.0" mnemonicParsing="false" text="Entrar" textFill="#008a28">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Label layoutX="247.0" layoutY="244.0" text="3. Modificar Informacion del Gym:" textFill="#faf7f7" wrapText="true">
+      <Label layoutX="238.0" layoutY="263.0" text="3. Modificar Informacion del Gym:" textFill="#faf7f7" wrapText="true">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Button layoutX="273.0" layoutY="282.0" mnemonicParsing="false" text="Entrar" textFill="#008a28">
+      <Button layoutX="270.0" layoutY="303.0" mnemonicParsing="false" text="Entrar" textFill="#008a28">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
+      <Label layoutX="144.0" layoutY="14.0" text="Bienvenido Administrador :" textFill="WHITE">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="284.0" layoutY="57.0" text="." textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

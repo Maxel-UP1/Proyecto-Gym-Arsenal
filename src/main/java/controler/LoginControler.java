@@ -56,6 +56,13 @@ public class LoginControler {
         return false;
     }
 
+    public String roleUserLoged(){
+
+        return  userLogged.getRol().name();
+
+    }
+
+
     public String informationLoggedAcount() {
         //if (logedAcount !=null) {
         return logedAcount.toString() + "\n " + userLogged.toString() ;
