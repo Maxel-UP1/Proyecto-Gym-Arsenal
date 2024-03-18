@@ -46,6 +46,15 @@ public class UserAcountControler {
         return acountsList;
     }
 
+      /*public String aaa(){
+        String a ="";
+        for (User u : usersList) {
+            a = a + u.toString();
+        }
+        return  a;
+    }*/
+
+
     public UserAcountControler() {
         this.accUtilities = new Utilities();
         this.usersList = new ArrayList<>();
@@ -53,13 +62,6 @@ public class UserAcountControler {
         this.jsonStorageUtilities = new JsonStorageUtilities();
     }
 
-    public String aaa(){
-        String a ="";
-        for (User u : usersList) {
-            a = a + u.toString();
-        }
-        return  a;
-    }
 
 
 
@@ -76,8 +78,27 @@ public class UserAcountControler {
         }
 
     }
+    public void writeFileReading(String nameFile, User user){
+        List<User> userListTEMP = jsonStorageUtilities.readContentFromFile(nameFile , PERSONTYPE);
+        userListTEMP.add(user);
+        jsonStorageUtilities.saveDataToFile(userListTEMP, nameFile, PERSONTYPE);
+        //se llama al metodo para recargar las cuentas en su almacenamientos.
+        chargeUsersReadFile(nameFile);
 
+    }
 
+    public boolean validateNameUserAcount(String nameUser, String nameFile){
+        chargeUsersReadFile(nameFile);
+        for (User users :  usersList) {
+            if (users.getAcount().getNameUser().equals(nameUser)){
+                //el nombre es igual
+                return true;
+            }
+
+        }
+
+        return  false;
+    }
 
 
 
@@ -118,14 +139,6 @@ public class UserAcountControler {
 
     }
 
-    public void writeFileReading(String nameFile, User user){
-        List<User> userListTEMP = jsonStorageUtilities.readContentFromFile(nameFile , PERSONTYPE);
-        userListTEMP.add(user);
-        jsonStorageUtilities.saveDataToFile(userListTEMP, nameFile, PERSONTYPE);
-        //se llama al metodo para recargar las cuentas en su almacenamientos.
-        chargeUsersReadFile(nameFile);
-
-    }
 
 
 

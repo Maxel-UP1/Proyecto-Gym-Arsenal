@@ -36,7 +36,7 @@ public class LoginView extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(LoginView.class.getResource("loginViewWindow.fxml"));
         LoginWindowControler loginController = new LoginWindowControler(userAcountControler, loginControler);
         fxmlLoader.setControllerFactory(controllerClass -> {
-            // Devolver la instancia de tu controlador
+            // Devolver la instancia del controlador
             return loginController;
         });
         Parent root = fxmlLoader.load();

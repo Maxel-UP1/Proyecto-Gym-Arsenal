@@ -5,6 +5,10 @@ import controler.UserAcountControler;
 import javafx.event.ActionEvent;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+import view.RegisterView;
+
+import java.io.IOException;
 
 public class LoginWindowControler {
     public UserAcountControler userAcountControler;
@@ -48,9 +52,10 @@ public class LoginWindowControler {
 
     }
 
-    public void SignIn(ActionEvent actionEvent) {
+    public void SignIn(ActionEvent actionEvent) throws IOException {
 
-        System.out.println("REGISTRO");
+        RegisterView registerView = new RegisterView( userAcountControler);
+        registerView.start(new Stage());
 
     }
 
