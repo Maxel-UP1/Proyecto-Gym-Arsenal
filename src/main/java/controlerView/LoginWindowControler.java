@@ -28,6 +28,9 @@ public class LoginWindowControler {
         if (loginAnswer){
             //incio sesion bien, continua la neuva ventana
             System.out.println("Inicio sesion bien");
+
+
+
         }else {
             System.out.println("Nombre usu o contraseña incorrecta ");
         }
