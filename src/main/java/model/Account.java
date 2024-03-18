@@ -1,6 +1,6 @@
 package model;
 
-public class Acount {
+public class Account {
 
     private String idPerson;
     private String nameUser;
@@ -27,5 +27,19 @@ public class Acount {
         this.idPerson = idPerson;
     }
 
+    public Account(String idPerson, String nameUser, String password) {
 
+        this.idPerson = idPerson;
+        this.nameUser = nameUser;
+        this.password = password;
+
+    }
+
+    public Account(String name) {
+        this.idPerson = "hola";
+        this.password = "vvidal";
+        this.nameUser = name;
+
+
+    }
 }

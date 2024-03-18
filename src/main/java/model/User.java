@@ -5,7 +5,7 @@ public class User {
     private String lastName;
     private String id;
     private Role rol;
-    private Acount acount;
+    private Account acount;
 
     public String getName() {
         return name;
@@ -39,11 +39,11 @@ public class User {
         this.rol = rol;
     }
 
-    public Acount getAcount() {
+    public Account getAcount() {
         return acount;
     }
 
-    public void setAcount(Acount acount) {
+    public void setAcount(Account acount) {
         this.acount = acount;
     }
 
@@ -55,6 +55,14 @@ public class User {
         this.rol = rol;
     }
 
+    public User(String name, String lastName, String id, Role rol, Account account) {
+
+        this.name = name;
+        this.lastName = lastName;
+        this.id = id;
+        this.rol = rol;
+        this.acount = account;
+    }
     public User() {
 
     }

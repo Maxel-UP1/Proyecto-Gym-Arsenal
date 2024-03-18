@@ -2,16 +2,16 @@ package controler;
 
 
 import java.util.HashSet;
-import model.Acount;
+import model.Account;
 import model.Role;
 import model.User;
 import utilities.Utilities;
 public class LoginControler {
 
     private HashSet<User> users;
-    private HashSet<Acount> acounts;
+    private HashSet<Account> acounts;
     private Utilities accUtilities;
-    private Acount logedAcount;
+    private Account logedAcount;
     private User userLogged;
 
     public LoginControler() {
@@ -32,7 +32,7 @@ public class LoginControler {
 
 
 
-    public HashSet<Acount> getAcounts() {
+    public HashSet<Account> getAcounts() {
         return acounts;
     }
 
@@ -44,7 +44,7 @@ public class LoginControler {
 
 
 
-    public Acount getLogedAcount() {
+    public Account getLogedAcount() {
         return logedAcount;
     }
 
@@ -107,7 +107,7 @@ public class LoginControler {
         }
         //crea el usuario
 
-        for (Acount acount : acounts) {
+        for (Account acount : acounts) {
             if (acount.getNameUser().equals(nameUser)) {return "1";} //devuelve 1 si ya esxiste el nombre de usuario
         }
         if(accUtilities.validatePassword(password)) {
