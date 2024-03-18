@@ -7,10 +7,8 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.scene.Node;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javax.swing.JOptionPane;
 import javafx.stage.Stage;
 import utilities.Utilities;
 
@@ -22,12 +20,16 @@ public class RegisterWindowControler {
     public TextField txtName;
     public TextField taxtLastName;
     public TextField txtNameUser;
+    public String roleSelcted;
     public Button btrnRegister;
     public Button btnCancel;
     public Label msgError;
+    public ComboBox voxId;
 
-    Utilities utilities;
+    Utilities utilities = new Utilities();
     ObservableList<String> rolesList = FXCollections.observableArrayList("Employee" , "Admin");
+    JOptionPane jp  = new JOptionPane();
+
 
 
     public UserAcountControler userAcountControler;
@@ -52,9 +54,10 @@ public class RegisterWindowControler {
         String lastName = taxtLastName.getText();
         String nameUser = txtNameUser.getText();
         String password = txtPassword.getText();
+
         Utilities utilities = new Utilities();
 
-       boolean namesEmpity = false,  userNameBad = false, paswordBad = false;
+       boolean namesEmpity = false,  userNameBad = false, paswordBad = false, rolSec = false;
 
         if (name.isEmpty() || lastName.isEmpty() || nameUser.isEmpty() || password.isEmpty()) {
             setMessage("Error: ","Todos los campos son obligatorios.");
@@ -64,6 +67,7 @@ public class RegisterWindowControler {
         // Validar nombre y apellido
         name = utilities.cleanNames(name);
         lastName = utilities.cleanNames(lastName);
+
 
         // Validar nombre de usuario
         nameUser = utilities.cleanNames(nameUser);
@@ -79,10 +83,15 @@ public class RegisterWindowControler {
             setMessage("Error: ","La contraseña no cumple con los requisitos mínimos." + "\nmin 2 numeros una  mayusucla, una  minuscula\n  min caracteres 6 y maximo 15 caracteres");
             paswordBad = true;
         }
-
+       if (roleSelcted == null){
+           setMessage("Error: ", " Selecciona un rol");
+           rolSec = true;
+       }
         // todos los campos son válidos, CREA EL OBJETO Y LO ESCRIBE EN EL ARCHIVO
-        if (! namesEmpity && ! userNameBad && !paswordBad ){
-            System.out.println("SE CREO NORMAL LLAMAR PERSISTENCIA");
+        if (! namesEmpity && ! userNameBad && !paswordBad  && !rolSec){
+            String RegisterRensponds = userAcountControler.addAcount("users" , name, lastName, roleSelcted,nameUser, password );
+            jp.showMessageDialog(null, "Cuenta Creada con exito.\nUsuario Recuerde su informacion\n" + RegisterRensponds , "CUENTA CREADA!!!", jp.INFORMATION_MESSAGE);
+
             setMessage("Éxito: ", "Registro exitoso.");
         }
 
@@ -115,8 +124,13 @@ public class RegisterWindowControler {
 
     public void viewRoles(Event event) {
         //muestra lo del combovox
+        utilities.fillComboVox(voxId, rolesList);
 
     }
 
+    public void selectRole(ActionEvent actionEvent) {
+
+        roleSelcted = (String) voxId.getValue();
+    }
 
 }

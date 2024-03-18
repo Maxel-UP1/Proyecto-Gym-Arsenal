@@ -2,6 +2,7 @@ module com.example.ejemplojfx {
     requires javafx.controls;
     requires javafx.fxml;
     requires com.google.gson;
+    requires java.desktop;
 
     opens view to javafx.fxml;
     opens controlerView to javafx.fxml;

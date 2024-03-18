@@ -31,5 +31,16 @@
       "nameUser": "admin",
       "password": "admin"
     }
+  },
+  {
+    "name": "fernando",
+    "lastName": "ramirez",
+    "id": "2024B01",
+    "rol": "ADMIN",
+    "acount": {
+      "idPerson": "2024B01",
+      "nameUser": "ferchowht",
+      "password": "Ad12gstd"
+    }
   }
 ]
