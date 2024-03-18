@@ -37,12 +37,12 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <Button layoutX="270.0" layoutY="124.0" mnemonicParsing="false" text="Entrar" textFill="#008a28">
+      <Button fx:id="btnModifyFinance" layoutX="270.0" layoutY="124.0" mnemonicParsing="false" onAction="#modifyFinance" text="Entrar" textFill="#008a28">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button layoutX="29.0" layoutY="333.0" mnemonicParsing="false" text="Retroceder" textFill="#ea0808">
+      <Button fx:id="btnGoBack" layoutX="29.0" layoutY="333.0" mnemonicParsing="false" onAction="#goBack" text="Retroceder" textFill="#ea0808">
          <font>
             <Font size="15.0" />
          </font>
@@ -52,7 +52,7 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Button layoutX="270.0" layoutY="211.0" mnemonicParsing="false" text="Entrar" textFill="#008a28">
+      <Button fx:id="btnShowFinance" layoutX="270.0" layoutY="211.0" mnemonicParsing="false" onAction="#showFinance" text="Entrar" textFill="#008a28">
          <font>
             <Font size="14.0" />
          </font>
@@ -62,7 +62,7 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <Button layoutX="270.0" layoutY="303.0" mnemonicParsing="false" text="Entrar" textFill="#008a28">
+      <Button fx:id="btnModifyInfoGym" layoutX="270.0" layoutY="303.0" mnemonicParsing="false" onAction="#modifyInfoGym" text="Entrar" textFill="#008a28">
          <font>
             <Font size="14.0" />
          </font>
@@ -72,7 +72,7 @@
             <Font size="29.0" />
          </font>
       </Label>
-      <Label layoutX="284.0" layoutY="57.0" text="." textFill="WHITE">
+      <Label fx:id="labelNameAdmin" layoutX="284.0" layoutY="57.0" text="." textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
