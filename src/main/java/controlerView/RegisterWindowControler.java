@@ -2,7 +2,10 @@ package controlerView;
 
 import controler.LoginControler;
 import controler.UserAcountControler;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -24,6 +27,7 @@ public class RegisterWindowControler {
     public Label msgError;
 
     Utilities utilities;
+    ObservableList<String> rolesList = FXCollections.observableArrayList("Employee" , "Admin");
 
 
     public UserAcountControler userAcountControler;
@@ -107,4 +111,12 @@ public class RegisterWindowControler {
         txtPassword.setText("");
 
     }
+
+
+    public void viewRoles(Event event) {
+        //muestra lo del combovox
+
+    }
+
+
 }

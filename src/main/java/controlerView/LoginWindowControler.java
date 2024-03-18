@@ -3,6 +3,8 @@ package controlerView;
 import controler.LoginControler;
 import controler.UserAcountControler;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -13,6 +15,8 @@ import java.io.IOException;
 public class LoginWindowControler {
     public UserAcountControler userAcountControler;
     public LoginControler loginControler;
+    public ComboBox voxId;
+
     public LoginWindowControler(UserAcountControler userAcountControler, LoginControler loginControler) {
         this.userAcountControler = userAcountControler;
         this.loginControler = loginControler;
@@ -32,6 +36,8 @@ public class LoginWindowControler {
         if (loginAnswer){
             //incio sesion bien, continua la neuva ventana
             System.out.println("Inicio sesion bien");
+
+
 
 
 
@@ -58,6 +64,9 @@ public class LoginWindowControler {
         registerView.start(new Stage());
 
     }
+
+
+
 
 
 }

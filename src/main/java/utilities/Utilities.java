@@ -1,4 +1,7 @@
 package utilities;
+import javafx.collections.ObservableList;
+import javafx.scene.control.ComboBox;
+
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -81,6 +84,13 @@ public class Utilities {
     }
 
     //validacioens en general
+
+
+    public void fillComboVox(ComboBox<String> coboToFill, ObservableList<String> content){
+        coboToFill.setItems(content);
+
+
+    }
 
 
 
