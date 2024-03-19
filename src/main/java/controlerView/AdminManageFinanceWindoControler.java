@@ -44,7 +44,8 @@ public class AdminManageFinanceWindoControler {
 
         }else {
             String hoursToSet = jp.showInputDialog(null, "Ingrese la cantidad de horas trabajadas por: \n" + infoPerosnById , "ASIGNAR HORAS ", jp.QUESTION_MESSAGE);
-
+            userAcountControler.setHoursWorked(IdSearch, Integer.parseInt(hoursToSet));
+            jp.showMessageDialog(null, "Cambio Realizado con Exito", "SUCESS!!", jp.INFORMATION_MESSAGE );
             if (Integer.parseInt(hoursToSet) < 240){
                 userAcountControler.configueWorkedHoursById(IdSearch, Integer.parseInt(hoursToSet));
             }else { jp.showMessageDialog(null, "Error, Demasiadas horas para un Mes", "ERROR !!", jp.ERROR_MESSAGE );}

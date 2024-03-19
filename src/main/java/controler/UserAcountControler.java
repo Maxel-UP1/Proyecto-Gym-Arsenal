@@ -175,6 +175,15 @@ public class UserAcountControler {
         return  null;
     }
 
+    public  void setHoursWorked(String id, int hoursToSet){
+        for (User users: usersList) {
+            if (users.getId().equals(id)){
+                users.setHorasTrabajadas(hoursToSet);
+            }
+        }
+    }
+
+
     //igual que el metodo anterior, solo que modifica las horas
     public void configueWorkedHoursById(String id, int workedHours){
         for (User users: usersList) {
