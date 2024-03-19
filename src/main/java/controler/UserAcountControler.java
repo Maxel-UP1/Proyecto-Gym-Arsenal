@@ -139,6 +139,24 @@ public class UserAcountControler {
 
     }
 
+    public String infoEmployes(){
+
+
+        String resut = "";
+        int cont = 0;
+        //la persistencia ya esta leida
+        for (User users : usersList) {
+
+            if (users.getRol().equals(Role.EMPLOYEE)){
+                cont++;
+                resut += cont + ")ID: " + users.getId() + " " + users.getName() + "\n";
+            }
+        }
+
+        return  resut;
+    }
+
+
 
 
 

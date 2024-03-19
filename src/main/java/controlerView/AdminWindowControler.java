@@ -41,7 +41,7 @@ public class AdminWindowControler {
     }
     public void showNameUserLoged(){
         labelNameAdmin.setText("Bienvenido Admin: " + loginControler.getUserLogged().getName());
-        //labelNameAdmin.setText("holasdasd");
+
 
     }
 

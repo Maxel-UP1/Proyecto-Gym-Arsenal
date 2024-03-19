@@ -18,6 +18,7 @@ public class AdminManageFinanceWindoControler {
     public Button btnGoBack;
     public Button btnSave;
     public Label labelEmploys;
+    public Label labelInfoMesagueClients;
 
     public UserAcountControler userAcountControler;
     private LoginControler loginControler;
@@ -34,6 +35,8 @@ public class AdminManageFinanceWindoControler {
 
     public void addHoursByID(ActionEvent actionEvent) {
 
+
+
     }
 
     public void goBack(ActionEvent actionEvent) {
@@ -43,6 +46,25 @@ public class AdminManageFinanceWindoControler {
     }
 
     public void saveMembersPay(ActionEvent actionEvent) {
+        boolean goodNumber = true;
+        if(txtCustomers.getText().isEmpty() ){
+            labelInfoMesagueClients.setText("VACIO!!");
+            goodNumber = false;
+        }
+        if (Integer.parseInt(txtCustomers.getText()) > 300){
+            labelInfoMesagueClients.setText("No valido");
+            goodNumber = false;
+        }
+
+        if (goodNumber){
+            gymControler.getArsenalGYM().setNumeberMembersPay(Integer.parseInt(txtCustomers.getText()));
+            labelInfoMesagueClients.setText("HECHO!!");
+        }
+
+    }
+
+    public void showNameEmployes(){
+        labelEmploys.setText(userAcountControler.infoEmployes());
 
 
 

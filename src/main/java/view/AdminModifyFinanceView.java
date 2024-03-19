@@ -33,12 +33,11 @@ public class AdminModifyFinanceView extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(AdminModifyFinanceView.class.getResource("AdimManageFinanceViewWidow.fxml"));
         AdminManageFinanceWindoControler adminManageFinanceWindoControler = new AdminManageFinanceWindoControler(userAcountControler, loginControler, gymControler);
         fxmlLoader.setController(adminManageFinanceWindoControler);
-
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root, 600, 400);
-
         stage.setTitle("Finanzas del GYM");
         stage.setScene(scene);
+        adminManageFinanceWindoControler.showNameEmployes();
         stage.show();
     }
 }

@@ -34,7 +34,6 @@ public class AdminView {
         fxmlLoader.setController(adminWindowControler);
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root, 601, 401);
-
         stage.setTitle("Menu ADMIN");
         stage.setScene(scene);
         adminWindowControler.showNameUserLoged();
