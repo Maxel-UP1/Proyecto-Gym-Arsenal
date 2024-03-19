@@ -29,6 +29,7 @@ public class GymControler {
 
     public void setRent(int rent){
         ArsenalGYM.setRent(rent);
+
     }
 
     public void setNumberEmployes(int numberEmployes){
