@@ -9,6 +9,7 @@ import utilities.Utilities;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.StringTokenizer;
 
 public class UserAcountControler {
 
@@ -85,6 +86,9 @@ public class UserAcountControler {
         //se llama al metodo para recargar las cuentas en su almacenamientos.
         chargeUsersReadFile(nameFile);
 
+    }
+    public void wirteFileAlone(String nameFile){
+        jsonStorageUtilities.saveDataToFile(usersList, nameFile, PERSONTYPE);
     }
 
     public boolean validateNameUserAcount(String nameUser, String nameFile){
@@ -175,12 +179,13 @@ public class UserAcountControler {
         return  null;
     }
 
-    public  void setHoursWorked(String id, int hoursToSet){
+    public  User userById(String id){
         for (User users: usersList) {
             if (users.getId().equals(id)){
-                users.setHorasTrabajadas(hoursToSet);
+                return users;
             }
         }
+        return null;
     }
 
 
@@ -205,6 +210,10 @@ public class UserAcountControler {
         return  cont;
     }
 
+    public void elminateUser(User user){
+        usersList.remove(user);
+
+    }
 
 
 

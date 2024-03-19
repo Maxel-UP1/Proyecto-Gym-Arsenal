@@ -12,18 +12,6 @@
     "horasTrabajadas": 0
   },
   {
-    "name": "Camilo",
-    "lastName": "Rodriguez",
-    "id": "2024B02",
-    "rol": "EMPLOYEE",
-    "acount": {
-      "idPerson": "2024B02",
-      "nameUser": "camro",
-      "password": "abcd"
-    },
-    "horasTrabajadas": 0
-  },
-  {
     "name": "Samuel",
     "lastName": "Gonzalez",
     "id": "2024A00",
@@ -46,5 +34,17 @@
       "password": "Ad12gstd"
     },
     "horasTrabajadas": 0
+  },
+  {
+    "name": "Camilo",
+    "lastName": "Rodriguez",
+    "id": "2024B02",
+    "rol": "EMPLOYEE",
+    "acount": {
+      "idPerson": "2024B02",
+      "nameUser": "camro",
+      "password": "abcd"
+    },
+    "horasTrabajadas": 5
   }
 ]

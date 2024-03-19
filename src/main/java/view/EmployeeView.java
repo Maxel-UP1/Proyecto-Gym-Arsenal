@@ -27,6 +27,7 @@ public class EmployeeView extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
+        userAcountControler.chargeUsersReadFile("users");
        
         FXMLLoader fxmlLoader = new FXMLLoader(EmployeeView.class.getResource("EmployeeViewWindow.fxml"));
         EmployeeWindowControler employeeWindowControler = new EmployeeWindowControler(userAcountControler, loginControler, gymControler);

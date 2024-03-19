@@ -9,6 +9,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import model.User;
 
 import javax.swing.*;
 
@@ -44,7 +45,15 @@ public class AdminManageFinanceWindoControler {
 
         }else {
             String hoursToSet = jp.showInputDialog(null, "Ingrese la cantidad de horas trabajadas por: \n" + infoPerosnById , "ASIGNAR HORAS ", jp.QUESTION_MESSAGE);
-            userAcountControler.setHoursWorked(IdSearch, Integer.parseInt(hoursToSet));
+            User userTEMP = userAcountControler.userById(IdSearch);
+            userTEMP.setHorasTrabajadas(Integer.parseInt(hoursToSet));
+            userAcountControler.elminateUser(userAcountControler.userById(IdSearch));
+
+            userAcountControler.wirteFileAlone("users");
+            userAcountControler.writeFileReading("users", userTEMP);
+            //modifica las horas escribiendolas en persistencia
+
+
             jp.showMessageDialog(null, "Cambio Realizado con Exito", "SUCESS!!", jp.INFORMATION_MESSAGE );
             if (Integer.parseInt(hoursToSet) < 240){
                 userAcountControler.configueWorkedHoursById(IdSearch, Integer.parseInt(hoursToSet));

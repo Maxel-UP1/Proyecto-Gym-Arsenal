@@ -79,6 +79,9 @@ public class User {
     public String toString() {
         return "Nombre: " + name + "\nApellido = " + lastName + "\nID unico = " + id + "\nRol asignado= " + rol;
     }
+    public  int aa(){
+        return horasTrabajadas;
+    }
 
 
 
