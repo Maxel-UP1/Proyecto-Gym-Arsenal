@@ -36,16 +36,25 @@ public class EmployeeWindowControler {
     }
 
     public void seeProfit(ActionEvent actionEvent) {
+        double salario = userAcountControler.userById(loginControler.getUserLogged().getId()).getHorasTrabajadas()* gymControler.getArsenalGYM().getValueWorkedWour();
+        String name =  loginControler.getUserLogged().getName() + " " + loginControler.getUserLogged().getLastName();
+        String profit = "Horas Trabajadas: " + userAcountControler.userById(loginControler.getUserLogged().getId()).getHorasTrabajadas() + "\n" +
+                "Tarifa por Hora: $" + gymControler.getArsenalGYM().getValueWorkedWour() + "\n" +
+                "Salario Bruto: $" + salario + "\n" +
+                "Salario Neto(-I.V.A): $" + (salario - (salario * 0.19 ));
 
+        jp.showMessageDialog(null, "Señor: " + name  + "\nSu pago por Trabajo" +  profit , "GANANCIAS", jp.INFORMATION_MESSAGE );
 
     }
 
     public void seeWorkedHours(ActionEvent actionEvent) {
         //ver las horas del usuario
+        String mesgOpcional ="";
         userAcountControler.chargeUsersReadFile("users");
         int workedHours = userAcountControler.userById(loginControler.getUserLogged().getId()).getHorasTrabajadas();
+        if (workedHours == 0){mesgOpcional = "Horas 0 Contacte un ADMINISTRADOR!!!";}
 
-        jp.showMessageDialog(null, "Sus horas trabajdas Fueron: " + workedHours , "SUCESS!!", jp.INFORMATION_MESSAGE );
+        jp.showMessageDialog(null, "Sus horas trabajdas Fueron: " + workedHours + "\n" + mesgOpcional , "SUCESS!!", jp.INFORMATION_MESSAGE );
 
         //String hoursToSet = jp.showInputDialog(null, "Ingrese la cantidad de horas trabajadas por: \n" + infoPerosnById , "ASIGNAR HORAS ", jp.QUESTION_MESSAGE);
 
