@@ -20,6 +20,7 @@ public class AdminWindowControler {
     public Button btnGoBack;
     public Button btnShowFinance;
     public Button btnModifyInfoGym;
+    public Button btnSeeGym;
     public Label labelNameAdmin;
     public UserAcountControler userAcountControler;
     private LoginControler loginControler;
@@ -59,4 +60,8 @@ public class AdminWindowControler {
     public void modifyInfoGym(ActionEvent actionEvent) {
 
     }
+    public void seeGym(ActionEvent actionEvent) {
+
+    }
+
 }

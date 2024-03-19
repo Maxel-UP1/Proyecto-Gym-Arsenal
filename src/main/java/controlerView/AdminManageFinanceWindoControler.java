@@ -10,6 +10,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+import javax.swing.*;
+
 public class AdminManageFinanceWindoControler {
 
 
@@ -23,6 +25,7 @@ public class AdminManageFinanceWindoControler {
     public UserAcountControler userAcountControler;
     private LoginControler loginControler;
     private GymControler gymControler;
+    private JOptionPane jp;
 
     public AdminManageFinanceWindoControler(UserAcountControler userAcountControler, LoginControler loginControler, GymControler gymControler) {
 
@@ -34,6 +37,22 @@ public class AdminManageFinanceWindoControler {
 
 
     public void addHoursByID(ActionEvent actionEvent) {
+        String IdSearch = jp.showInputDialog(null, "Ingrese el Id del empelado" , "ASIGNAR HORAS", jp.QUESTION_MESSAGE);
+        String infoPerosnById = userAcountControler.nameById(IdSearch);
+        if (infoPerosnById == null){
+            jp.showMessageDialog(null, "Error, ID No se econtro o no Existe", "ERROR !!", jp.ERROR_MESSAGE );
+
+        }else {
+            String hoursToSet = jp.showInputDialog(null, "Ingrese la cantidad de horas trabajadas por: \n" + infoPerosnById , "ASIGNAR HORAS ", jp.QUESTION_MESSAGE);
+
+            if (Integer.parseInt(hoursToSet) < 240){
+                userAcountControler.configueWorkedHoursById(IdSearch, Integer.parseInt(hoursToSet));
+            }else { jp.showMessageDialog(null, "Error, Demasiadas horas para un Mes", "ERROR !!", jp.ERROR_MESSAGE );}
+
+        }
+
+
+
 
 
 
@@ -65,6 +84,7 @@ public class AdminManageFinanceWindoControler {
 
     public void showNameEmployes(){
         labelEmploys.setText(userAcountControler.infoEmployes());
+        txtCustomers.setText("1");
 
 
 

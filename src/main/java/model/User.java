@@ -6,6 +6,7 @@ public class User {
     private String id;
     private Role rol;
     private Account acount;
+    private int horasTrabajadas;
 
     public String getName() {
         return name;
@@ -45,6 +46,13 @@ public class User {
 
     public void setAcount(Account acount) {
         this.acount = acount;
+    }
+    public int getHorasTrabajadas() {
+        return horasTrabajadas;
+    }
+
+    public void setHorasTrabajadas(int horasTrabajadas) {
+        this.horasTrabajadas = horasTrabajadas;
     }
 
     public User(String name, String lastName, String id, Role rol) {

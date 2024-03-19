@@ -45,7 +45,7 @@
             <Font size="15.0" />
          </font>
       </Button>
-      <Label layoutX="326.0" layoutY="77.0" text="Ingrese el numero de  clientes " textFill="#faf7f7">
+      <Label layoutX="326.0" layoutY="77.0" text="Ingrese el número de  clientes " textFill="#faf7f7">
          <font>
             <Font size="16.0" />
          </font>
