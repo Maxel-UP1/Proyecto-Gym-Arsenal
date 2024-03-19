@@ -5,6 +5,7 @@ import controler.UserAcountControler;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -18,17 +19,22 @@ public class LoginWindowControler {
     public UserAcountControler userAcountControler;
     public LoginControler loginControler;
     public ComboBox voxId;
+    public Label txtInfoMesague;
 
     public LoginWindowControler(UserAcountControler userAcountControler, LoginControler loginControler) {
         this.userAcountControler = userAcountControler;
         this.loginControler = loginControler;
+
     }
 
     public TextField txtUsername;
     public PasswordField txtPassword;
 
+
+
     public void logIn(ActionEvent actionEvent) throws IOException {
         //inicia la sesion
+        txtInfoMesague.setText("Bienvenido");
         //System.out.println(userAcountControler.aaa());
         //System.out.println( "Esta vacio? " + loginControler.ddd());
 
@@ -44,7 +50,7 @@ public class LoginWindowControler {
 
                     break;
                 case "ADMIN":
-                    AdminView adminView = new AdminView(userAcountControler);
+                    AdminView adminView = new AdminView(userAcountControler, loginControler);
                     adminView.start(new Stage());
 
                     break;
@@ -55,7 +61,8 @@ public class LoginWindowControler {
 
 
         }else {
-            System.out.println("Nombre usu o contraseña incorrecta ");
+            txtInfoMesague.setText("Usuario o contraseña Incorrecta");
+
         }
 
 
@@ -70,6 +77,7 @@ public class LoginWindowControler {
 
 
     }
+
 
     public void SignIn(ActionEvent actionEvent) throws IOException {
 

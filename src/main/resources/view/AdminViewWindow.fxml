@@ -32,7 +32,7 @@
             <Cursor fx:constant="TEXT" />
          </cursor>
       </Label>
-      <Label layoutX="239.0" layoutY="167.0" text="2. Mostrar Finanzas: " textFill="#faf7f7" wrapText="true">
+      <Label layoutX="239.0" layoutY="167.0" text="2. Mostrar Finanzas y Ganancias: " textFill="#faf7f7" wrapText="true">
          <font>
             <Font size="20.0" />
          </font>
@@ -72,9 +72,9 @@
             <Font size="29.0" />
          </font>
       </Label>
-      <Label fx:id="labelNameAdmin" layoutX="284.0" layoutY="57.0" text="." textFill="WHITE">
+      <Label fx:id="labelNameAdmin" layoutX="188.0" layoutY="57.0" prefHeight="27.0" prefWidth="274.0" text="." textFill="WHITE">
          <font>
-            <Font size="18.0" />
+            <Font size="22.0" />
          </font>
       </Label>
    </children>

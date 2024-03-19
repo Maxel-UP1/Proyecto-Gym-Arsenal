@@ -52,5 +52,10 @@
             <Font size="14.0" />
          </font>
       </Label>
+      <Label fx:id="txtInfoMesague" layoutX="300.0" layoutY="307.0" prefHeight="27.0" prefWidth="291.0" text="." textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
