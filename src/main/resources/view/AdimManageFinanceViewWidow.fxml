@@ -24,7 +24,7 @@
             <Image url="@../images/LogoGym.jpg" />
          </image>
       </ImageView>
-      <TextField layoutX="326.0" layoutY="135.0" prefHeight="26.0" prefWidth="53.0" />
+      <TextField fx:id="txtCustomers" layoutX="326.0" layoutY="135.0" prefHeight="26.0" prefWidth="53.0" />
       <Label layoutX="239.0" layoutY="24.0" text="Finanzas Gym:" textFill="WHITE">
          <font>
             <Font size="29.0" />
@@ -35,12 +35,12 @@
             <Font size="16.0" />
          </font>
       </Label>
-      <Button layoutX="361.0" layoutY="348.0" mnemonicParsing="false" text="Agregar Horas por ID" textFill="#008a28">
+      <Button fx:id="btnAddHoursById" layoutX="361.0" layoutY="348.0" mnemonicParsing="false" onAction="#addHoursByID" text="Agregar Horas por ID" textFill="#008a28">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button layoutX="55.0" layoutY="347.0" mnemonicParsing="false" text="Retroceder" textFill="#ea0808">
+      <Button fx:id="btnGoBack" layoutX="55.0" layoutY="347.0" mnemonicParsing="false" onAction="#goBack" text="Retroceder" textFill="#ea0808">
          <font>
             <Font size="15.0" />
          </font>
@@ -50,7 +50,7 @@
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="326.0" layoutY="174.0" text="Modifiar/Agregar Horas trabajadas " textFill="#faf7f7">
+      <Label layoutX="326.0" layoutY="174.0" text="Modificar/Agregar Horas trabajadas " textFill="#faf7f7">
          <font>
             <Font size="16.0" />
          </font>
@@ -60,7 +60,7 @@
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="329.0" layoutY="227.0" prefHeight="114.0" prefWidth="247.0" text="." textFill="WHITE" />
-      <Button layoutX="423.0" layoutY="135.0" mnemonicParsing="false" text="Guardar" />
+      <Label fx:id="labelEmploys" layoutX="329.0" layoutY="227.0" prefHeight="114.0" prefWidth="247.0" text="." textFill="WHITE" />
+      <Button fx:id="btnSave" layoutX="423.0" layoutY="135.0" mnemonicParsing="false" onAction="#saveMembersPay" text="Guardar" />
    </children>
 </AnchorPane>

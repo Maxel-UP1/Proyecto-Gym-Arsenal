@@ -7,8 +7,16 @@ public class Gym {
         private double valueWorkedWour; //valor por cada hora.
         private int rent;
         private int numberEmployes;
+        private int numberMembersPay;
         public static final int MAX_MOUNTHLY_HOURS = 240; //nadie puede trabajar mas de 240 horas
 
+
+    public Gym(String name, double valueMembership, double valueWorkedWour, int rent) {
+        this.name = name;
+        this.valueMembership = valueMembership;
+        this.valueWorkedWour = valueWorkedWour;
+        this.rent = rent;
+    }
 
     public String getName() {
         return name;
@@ -50,6 +58,11 @@ public class Gym {
         this.numberEmployes = numberEmployes;
     }
 
+    public int getNumeberMembersPay() {
+        return numberMembersPay;
+    }
 
-
+    public void setNumeberMembersPay(int numeberMembersPay) {
+        this.numberMembersPay = numeberMembersPay;
+    }
 }

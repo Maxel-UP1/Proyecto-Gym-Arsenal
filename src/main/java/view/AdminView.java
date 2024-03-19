@@ -1,5 +1,6 @@
 package view;
 
+import controler.GymControler;
 import controler.LoginControler;
 import controler.UserAcountControler;
 import controlerView.AdminWindowControler;
@@ -16,18 +17,20 @@ public class AdminView {
 
     public UserAcountControler userAcountControler;
     private LoginControler loginControler;
+    private GymControler gymControler;
 
-    public AdminView(UserAcountControler userAcountControler, LoginControler loginControler) {
+    public AdminView(UserAcountControler userAcountControler, LoginControler loginControler, GymControler gymControler) {
 
         this.userAcountControler = userAcountControler;
         this.loginControler = loginControler;
+        this.gymControler = gymControler;
     }
 
     //@Override
     public void start(Stage stage) throws IOException {
 
         FXMLLoader fxmlLoader = new FXMLLoader(AdminView.class.getResource("AdminViewWindow.fxml"));
-        AdminWindowControler adminWindowControler = new AdminWindowControler(userAcountControler, loginControler );
+        AdminWindowControler adminWindowControler = new AdminWindowControler(userAcountControler, loginControler, gymControler );
         fxmlLoader.setController(adminWindowControler);
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root, 601, 401);

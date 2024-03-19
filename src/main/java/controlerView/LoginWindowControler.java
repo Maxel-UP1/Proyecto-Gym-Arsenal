@@ -1,5 +1,6 @@
 package controlerView;
 
+import controler.GymControler;
 import controler.LoginControler;
 import controler.UserAcountControler;
 import javafx.event.ActionEvent;
@@ -18,12 +19,14 @@ import java.io.IOException;
 public class LoginWindowControler {
     public UserAcountControler userAcountControler;
     public LoginControler loginControler;
+    private GymControler gymControler;
     public ComboBox voxId;
     public Label txtInfoMesague;
 
-    public LoginWindowControler(UserAcountControler userAcountControler, LoginControler loginControler) {
+    public LoginWindowControler(UserAcountControler userAcountControler, LoginControler loginControler, GymControler gymControler) {
         this.userAcountControler = userAcountControler;
         this.loginControler = loginControler;
+        this.gymControler = gymControler;
 
     }
 
@@ -45,12 +48,12 @@ public class LoginWindowControler {
             //preguna el rol para la nueva ventana
             switch (loginControler.roleUserLoged()) {
                 case "EMPLOYEE":
-                    EmployeeView employeeView = new EmployeeView( userAcountControler);
+                    EmployeeView employeeView = new EmployeeView( userAcountControler, loginControler, gymControler);
                     employeeView.start(new Stage());
 
                     break;
                 case "ADMIN":
-                    AdminView adminView = new AdminView(userAcountControler, loginControler);
+                    AdminView adminView = new AdminView(userAcountControler, loginControler, gymControler);
                     adminView.start(new Stage());
 
                     break;
