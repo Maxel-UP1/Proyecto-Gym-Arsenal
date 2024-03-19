@@ -83,7 +83,7 @@ public class LoginWindowControler {
 
 
     public void SignIn(ActionEvent actionEvent) throws IOException {
-
+        //registrarse
         RegisterView registerView = new RegisterView( userAcountControler);
         registerView.start(new Stage());
 
