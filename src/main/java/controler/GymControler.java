@@ -15,6 +15,9 @@ public class GymControler {
         return ArsenalGYM;
     }
 
+    public void setNumbersEmployes(int numbersEmployes){
+        ArsenalGYM.setNumberEmployes(numbersEmployes);
+    }
 
 
 

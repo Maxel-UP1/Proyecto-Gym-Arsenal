@@ -140,8 +140,6 @@ public class UserAcountControler {
     }
 
     public String infoEmployes(){
-
-
         String resut = "";
         int cont = 0;
         //la persistencia ya esta leida
@@ -154,6 +152,18 @@ public class UserAcountControler {
         }
 
         return  resut;
+    }
+    public int cantEmployes(){
+        int cont = 0;
+        //la persistencia ya esta leida
+        for (User users : usersList) {
+
+            if (users.getRol().equals(Role.EMPLOYEE)){
+                cont++;
+            }
+        }
+
+        return  cont;
     }
 
     public String nameById(String id){
@@ -174,7 +184,17 @@ public class UserAcountControler {
         }
 
     }
+    public int totaolWorkedHoursAllEmployes(){
+        int cont = 0;
+        for (User users : usersList) {
 
+            if (users.getRol().equals(Role.EMPLOYEE)){
+
+                cont += users.getHorasTrabajadas();
+            }
+        }
+        return  cont;
+    }
 
 
 

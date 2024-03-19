@@ -92,7 +92,11 @@ public class Utilities {
 
     }
 
-
+    // Método para generar un número aleatorio entre min y max
+    public int generateRandomNumber(int min, int max) {
+        Random random = new Random();
+        return random.nextInt(max - min + 1) + min;
+    }
 
 
 }

@@ -9,6 +9,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 import view.AdminModifyFinanceView;
+import view.AdminSeeEarningView;
 import view.RegisterView;
 
 import java.io.IOException;
@@ -53,7 +54,10 @@ public class AdminWindowControler {
         stage.close();
     }
 
-    public void showFinance(ActionEvent actionEvent) {
+    public void showFinance(ActionEvent actionEvent) throws IOException {
+
+        AdminSeeEarningView adminSeeEarningView = new AdminSeeEarningView(userAcountControler, loginControler, gymControler);
+        adminSeeEarningView.start(new Stage());
 
     }
 
