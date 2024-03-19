@@ -8,7 +8,8 @@
       "idPerson": "2024B01",
       "nameUser": "pep23",
       "password": "12345"
-    }
+    },
+    "horasTrabajadas": 0
   },
   {
     "name": "Camilo",
@@ -19,7 +20,8 @@
       "idPerson": "2024B02",
       "nameUser": "camro",
       "password": "abcd"
-    }
+    },
+    "horasTrabajadas": 0
   },
   {
     "name": "Samuel",
@@ -30,7 +32,8 @@
       "idPerson": "2024A00",
       "nameUser": "admin",
       "password": "admin"
-    }
+    },
+    "horasTrabajadas": 0
   },
   {
     "name": "Fernando",
@@ -41,7 +44,7 @@
       "idPerson": "2024B01",
       "nameUser": "ferchowht",
       "password": "Ad12gstd"
-    }
+    },
+    "horasTrabajadas": 0
   }
-  
 ]

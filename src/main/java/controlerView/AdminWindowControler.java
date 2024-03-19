@@ -10,6 +10,7 @@ import javafx.scene.control.Label;
 import javafx.stage.Stage;
 import view.AdminModifyFinanceView;
 import view.AdminSeeEarningView;
+import view.AdminSeeInfoGymView;
 import view.RegisterView;
 
 import java.io.IOException;
@@ -61,11 +62,13 @@ public class AdminWindowControler {
 
     }
 
-    public void modifyInfoGym(ActionEvent actionEvent) {
+    public void modifyInfoGym(ActionEvent actionEvent) throws IOException {
+
 
     }
-    public void seeGym(ActionEvent actionEvent) {
-
+    public void seeGym(ActionEvent actionEvent) throws IOException {
+        AdminSeeInfoGymView adminSeeInfoGymView = new AdminSeeInfoGymView(userAcountControler,loginControler,gymControler);
+        adminSeeInfoGymView.start(new Stage());
     }
 
 }

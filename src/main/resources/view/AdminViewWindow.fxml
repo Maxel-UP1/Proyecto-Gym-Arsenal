@@ -39,7 +39,7 @@
       </Label>
       <Button fx:id="btnModifyFinance" layoutX="270.0" layoutY="124.0" mnemonicParsing="false" onAction="#modifyFinance" text="Entrar" textFill="#008a28">
          <font>
-            <Font size="14.0" />
+            <Font size="16.0" />
          </font>
       </Button>
       <Button fx:id="btnGoBack" layoutX="29.0" layoutY="333.0" mnemonicParsing="false" onAction="#goBack" text="Retroceder" textFill="#ea0808">
@@ -54,17 +54,17 @@
       </Label>
       <Button fx:id="btnShowFinance" layoutX="270.0" layoutY="211.0" mnemonicParsing="false" onAction="#showFinance" text="Entrar" textFill="#008a28">
          <font>
-            <Font size="14.0" />
+            <Font size="16.0" />
          </font>
       </Button>
-      <Label layoutX="238.0" layoutY="263.0" text="3. Modificar Informacion del Gym:" textFill="#faf7f7" wrapText="true">
+      <Label layoutX="202.0" layoutY="333.0" text="4. Modificar Informacion del Gym:" textFill="#faf7f7" wrapText="true">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Button fx:id="btnModifyInfoGym" layoutX="272.0" layoutY="303.0" mnemonicParsing="false" onAction="#modifyInfoGym" text="Entrar" textFill="#008a28">
+      <Button fx:id="btnModifyInfoGym" layoutX="519.0" layoutY="330.0" mnemonicParsing="false" onAction="#modifyInfoGym" text="Entrar" textFill="#008a28">
          <font>
-            <Font size="14.0" />
+            <Font size="16.0" />
          </font>
       </Button>
       <Label layoutX="144.0" layoutY="14.0" text="Bienvenido Administrador :" textFill="WHITE">
@@ -77,11 +77,15 @@
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="224.0" layoutY="343.0" text="4. Ver Informacion del Gym:" textFill="#faf7f7" wrapText="true">
+      <Label layoutX="216.0" layoutY="267.0" text="3. Ver Informacion del Gym:" textFill="#faf7f7" wrapText="true">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Button fx:id="btnSeeGym" layoutX="504.0" layoutY="347.0" mnemonicParsing="false" onAction="#seeGym" text="Ver" textFill="#1db118" />
+      <Button fx:id="btnSeeGym" layoutX="505.0" layoutY="263.0" mnemonicParsing="false" onAction="#seeGym" text="Ver" textFill="#1db118">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
