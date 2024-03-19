@@ -29,17 +29,17 @@
             <Font size="29.0" />
          </font>
       </Label>
-      <Button layoutX="502.0" layoutY="336.0" mnemonicParsing="false" text="Guardar" textFill="#008a28">
+      <Button fx:id="btnChangeInfo" layoutX="487.0" layoutY="336.0" mnemonicParsing="false" onAction="#changeInfo" text="Guardar" textFill="#008a28">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button layoutX="53.0" layoutY="335.0" mnemonicParsing="false" text="Retroceder" textFill="#ea0808">
+      <Button fx:id="btnGoBack" layoutX="53.0" layoutY="335.0" mnemonicParsing="false" onAction="#goBack" text="Retroceder" textFill="#ea0808">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
-      <Label layoutX="247.0" layoutY="89.0" text="1. Tarifa Membresia:" textFill="#faf7f7">
+      <Label layoutX="270.0" layoutY="89.0" text="1. Tarifa Membresia:" textFill="#faf7f7">
          <font>
             <Font size="16.0" />
          </font>
@@ -49,7 +49,7 @@
             <Font size="15.0" />
          </font>
       </Label>
-      <Label layoutX="251.0" layoutY="141.0" text="2. Tarifa  Hora:" textFill="#faf7f7">
+      <Label layoutX="267.0" layoutY="140.0" text="2. Tarifa  Hora:" textFill="#faf7f7">
          <font>
             <Font size="16.0" />
          </font>
@@ -59,29 +59,33 @@
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="244.0" layoutY="197.0" text="3. Alquiler Lugar:" textFill="#faf7f7">
+      <Label layoutX="272.0" layoutY="197.0" text="3. Alquiler Lugar:" textFill="#faf7f7">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="248.0" layoutY="247.0" text="4. Numero maximo :" textFill="#faf7f7">
+      <Label layoutX="270.0" layoutY="279.0" text="-- Nombre" textFill="#faf7f7">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="261.0" layoutY="273.0" text="de Empleados" textFill="#faf7f7">
+      <Label layoutX="287.0" layoutY="243.0" text="opcional" textFill="#faf7f7">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <TextField layoutX="472.0" layoutY="89.0" prefHeight="26.0" prefWidth="100.0" />
-      <TextField layoutX="472.0" layoutY="197.0" prefHeight="26.0" prefWidth="100.0" />
-      <TextField layoutX="472.0" layoutY="259.0" prefHeight="26.0" prefWidth="100.0" />
-      <TextField layoutX="472.0" layoutY="140.0" prefHeight="26.0" prefWidth="100.0" />
+      <TextField fx:id="txtNewValueMebership" layoutX="472.0" layoutY="88.0" prefHeight="26.0" prefWidth="100.0" />
+      <TextField fx:id="txtNewRent" layoutX="472.0" layoutY="197.0" prefHeight="26.0" prefWidth="100.0" />
+      <TextField fx:id="txtNewName" layoutX="472.0" layoutY="278.0" prefHeight="26.0" prefWidth="100.0" promptText="Arsenal Gym" />
+      <TextField fx:id="txtNewWorkedHour" layoutX="472.0" layoutY="140.0" prefHeight="26.0" prefWidth="100.0" />
       <Label layoutX="263.0" layoutY="57.0" prefHeight="31.0" prefWidth="180.0" text="Constancias:" textFill="WHITE">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
+      <Label fx:id="lblMessague" layoutX="236.0" layoutY="335.0" prefHeight="30.0" prefWidth="225.0" text="." textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
    </children>
 </AnchorPane>

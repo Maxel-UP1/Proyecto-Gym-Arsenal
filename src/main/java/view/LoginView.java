@@ -31,7 +31,7 @@ public class LoginView extends Application {
     public void start(Stage stage) throws IOException {
         //lee la persistencia para cargar en memoria
         userAcountControler.chargeUsersReadFile("users");
-        gymControler.setNumbersEmployes(userAcountControler.cantEmployes());
+        gymControler.setNumberEmployes(userAcountControler.cantEmployes());
 
         loginControler = new LoginControler(userAcountControler);
 

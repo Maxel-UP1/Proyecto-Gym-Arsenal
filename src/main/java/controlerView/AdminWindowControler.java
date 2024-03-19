@@ -8,10 +8,7 @@ import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
-import view.AdminModifyFinanceView;
-import view.AdminSeeEarningView;
-import view.AdminSeeInfoGymView;
-import view.RegisterView;
+import view.*;
 
 import java.io.IOException;
 
@@ -63,6 +60,8 @@ public class AdminWindowControler {
     }
 
     public void modifyInfoGym(ActionEvent actionEvent) throws IOException {
+        AdminModifyGymValuesView adminModifyGymValuesView = new AdminModifyGymValuesView(gymControler);
+        adminModifyGymValuesView.start(new Stage());
 
 
     }
