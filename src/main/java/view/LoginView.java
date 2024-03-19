@@ -1,6 +1,7 @@
 package view;
 
 
+import controler.GymControler;
 import controler.LoginControler;
 import controler.UserAcountControler;
 import controlerView.LoginWindowControler;
@@ -14,12 +15,14 @@ import java.io.IOException;
 
 public class LoginView extends Application {
     private  UserAcountControler userAcountControler;
+    private GymControler gymControler;
     private LoginControler loginControler;
 
     public static Stage currentStage;
 
     public LoginView(){
         userAcountControler = new UserAcountControler();
+        gymControler = new GymControler();
 
     }
 
@@ -34,7 +37,7 @@ public class LoginView extends Application {
 
         //muestra la ventana principal
         FXMLLoader fxmlLoader = new FXMLLoader(LoginView.class.getResource("loginViewWindow.fxml"));
-        LoginWindowControler loginController = new LoginWindowControler(userAcountControler, loginControler);
+        LoginWindowControler loginController = new LoginWindowControler(userAcountControler, loginControler, gymControler);
         fxmlLoader.setControllerFactory(controllerClass -> {
             // Devolver la instancia del controlador
             return loginController;
